@@ -1,3 +1,10 @@
+
+
 export const filterNumbers = (array, largerThan) => {
-  return array
+  let newArray = array.filter(function (item){
+    if (item <= largerThan)
+    return item;
+  })
+  return newArray
 }
+

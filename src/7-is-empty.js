@@ -1,3 +1,14 @@
+// export const isEmpty = (stringArrayOrObject) => {
+//   const type = typeof stringArrayOrObject
+
+//   if (type === 'string') {
+//     return stringArrayOrObject === ''
+//   }
+
+//   return false
+// }
+
+
 export const isEmpty = (stringArrayOrObject) => {
   const type = typeof stringArrayOrObject
 
@@ -5,5 +16,12 @@ export const isEmpty = (stringArrayOrObject) => {
     return stringArrayOrObject === ''
   }
 
+  if (type === 'array') {
+    return !stringArrayOrObject.length === ''
+  }
+  if (type === 'object'){
+    return Object.keys(stringArrayOrObject).length === 0
+
+  }
   return false
 }
